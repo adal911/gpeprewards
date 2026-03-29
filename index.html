@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>GPEP133 | Premium Leaderboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Montserrat", "sans-serif"] },
+            colors: {
+              brandDark: "#0A0F1E",
+              brandBlue: "#1EA1F2",
+              brandGold: "#F5A623",
+              brandPanel: "#131A2A",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="antialiased overflow-x-hidden w-full relative bg-brandDark text-white"
+  >
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      <div class="bg-shape shape-3"></div>
+    </div>
+
+    <nav
+      class="glass-nav fixed inset-x-0 top-0 z-50 transition-all duration-300 w-full max-w-[100vw]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center cursor-pointer">
+            <img
+              src="../assets/img/logo.png"
+              alt="Logo"
+              class="h-10 md:h-14 drop-shadow-lg object-contain"
+            />
+          </div>
+
+          <div
+            class="hidden md:flex space-x-8 font-bold text-sm tracking-wider uppercase text-gray-300"
+          >
+            <a href="./" class="text-brandGold transition">Leaderboard</a>
+            <a href="./stream.html" class="hover:text-brandBlue transition"
+              >Stream</a
+            >
+          </div>
+
+          <div class="hidden md:flex items-center">
+            <a
+              href="https://discord.com/invite/dB6eFNV8XW"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#5865F2] hover:bg-[#4752C4] text-white px-5 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2 transition shadow-[0_0_15px_rgba(88,101,242,0.5)] hover:scale-105"
+            >
+              <i class="fa-brands fa-discord text-lg"></i> Support
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <a
+              href="https://discord.com/invite/dB6eFNV8XW"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-discord text-lg"></i> Support
+              id="mobile-menu-btn" class="text-gray-300 hover:text-white
+              focus:outline-none text-2xl transition duration-300 p-2" >
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#0A0F1E]/95 backdrop-blur-xl border-t border-brandBlue/20 shadow-2xl absolute w-full left-0 transition-all duration-300"
+      >
+        <div
+          class="px-4 pt-4 pb-6 space-y-4 flex flex-col font-bold text-sm tracking-wider uppercase text-center"
+        >
+          <a
+            href="./"
+            class="block text-brandGold transition py-3 border-b border-gray-800"
+            >Leaderboard</a
+          >
+          <a
+            href="./stream.html"
+            class="block text-gray-300 hover:text-brandBlue transition py-3 border-b border-gray-800"
+            >Stream</a
+          >
+          <div class="pt-4 flex justify-center">
+            <a
+              href="https://discord.com/invite/dB6eFNV8XW"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#5865F2] hover:bg-[#4752C4] text-white px-8 py-3 rounded-lg font-bold text-sm flex items-center gap-2 transition shadow-[0_0_15px_rgba(88,101,242,0.5)]"
+            >
+              <i class="fa-brands fa-discord text-lg"></i> Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="pt-28 md:pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col items-center w-full"
+    >
+      <div class="text-center mb-10 w-full">
+        <img
+          src="./assets/img/stake.svg"
+          alt="Stake Logo"
+          class="h-8 md:h-14 mx-auto mb-4 md:mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] object-contain"
+        />
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl font-black italic tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-yellow-200 drop-shadow-[0_0_15px_rgba(245,166,35,0.8)] px-2"
+        >
+          $500 LEADERBOARD
+        </h1>
+        <p
+          class="mt-4 md:mt-6 text-sm md:text-base text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed px-2"
+        >
+          Welcome to the ultimate wager race! Spin your favorite slots, climb
+          the ranks, and secure your spot on the podium to take home massive
+          cash prizes.
+        </p>
+        <a
+          href="https://stake.com/?c=YOUR_AFFILIATE_CODE"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-6 md:mt-8 bg-gradient-to-r from-brandBlue to-blue-600 hover:from-blue-400 hover:to-brandBlue text-white font-black uppercase tracking-widest px-8 py-3 md:px-10 md:py-4 rounded-full text-base md:text-lg shadow-[0_0_20px_rgba(30,161,242,0.6)] hover:scale-105 transition-all duration-300"
+        >
+          Play Now
+        </a>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row items-end justify-center gap-4 md:gap-6 w-full max-w-4xl mb-12 mt-8 px-2 md:px-0"
+      >
+        <div
+          class="order-2 md:order-1 flex flex-col items-center w-full md:w-1/3 mt-4 md:mt-0"
+        >
+          <div
+            class="w-16 h-16 mb-[-32px] mx-auto bg-gray-300 rounded-full border-4 border-gray-400 flex items-center justify-center font-black text-gray-800 text-2xl shadow-[0_0_15px_rgba(192,192,192,0.5)] z-20 relative"
+          >
+            <i class="fa-solid fa-ghost"></i>
+          </div>
+          <div
+            class="w-full h-56 md:h-64 podium-2 rounded-t-xl flex flex-col items-center pt-12 relative overflow-hidden"
+          >
+            <span
+              class="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-widest mb-1 z-10"
+              >Player</span
+            >
+            <h3
+              class="font-bold text-xl md:text-2xl text-white tracking-wide z-10 leading-none"
+              id="user1_name"
+            >
+              ----
+            </h3>
+            <span
+              class="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-widest mt-4 mb-1 z-10"
+              >Wagered</span
+            >
+            <p
+              class="text-gray-200 font-bold text-sm md:text-base z-10 leading-none"
+              id="user1_wager"
+            >
+              $----
+            </p>
+            <div
+              class="mt-4 bg-gray-800/80 px-4 py-1.5 rounded-full border border-gray-500/50 z-10"
+            >
+              <p class="text-white font-black text-xs md:text-sm">$150 Prize</p>
+            </div>
+            <span
+              class="text-8xl font-black text-white/5 absolute -bottom-4 right-2 z-0"
+              >2</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="order-1 md:order-2 flex flex-col items-center w-full md:w-1/3 z-10 scale-100 md:scale-110"
+        >
+          <div class="relative mb-[-40px] z-20">
+            <i
+              class="fa-solid fa-crown absolute -top-8 left-1/2 transform -translate-x-1/2 text-4xl text-brandGold drop-shadow-[0_0_10px_rgba(245,166,35,0.8)]"
+            ></i>
+            <div
+              class="w-20 h-20 mx-auto bg-brandGold rounded-full border-4 border-yellow-300 flex items-center justify-center font-black text-gray-900 text-3xl shadow-[0_0_20px_rgba(245,166,35,0.6)]"
+            >
+              <i class="fa-solid fa-dragon"></i>
+            </div>
+          </div>
+          <div
+            class="w-full h-64 md:h-80 podium-1 rounded-t-xl flex flex-col items-center pt-16 relative overflow-hidden"
+          >
+            <span
+              class="text-[10px] md:text-xs font-black text-brandGold/70 uppercase tracking-widest mb-1 z-10"
+              >Player</span
+            >
+            <h3
+              class="font-black text-2xl md:text-3xl text-white tracking-wide drop-shadow-md z-10 leading-none"
+              id="user0_name"
+            >
+              ----
+            </h3>
+            <span
+              class="text-[10px] md:text-xs font-black text-brandGold/70 uppercase tracking-widest mt-5 mb-1 z-10"
+              >Wagered</span
+            >
+            <p
+              class="text-brandGold font-bold text-base md:text-lg z-10 leading-none"
+              id="user0_wager"
+            >
+              $----
+            </p>
+            <div
+              class="mt-5 bg-brandDark/80 px-5 py-2 rounded-full border border-brandGold/50 shadow-[0_0_10px_rgba(245,166,35,0.3)] z-10"
+            >
+              <p class="text-brandGold font-black text-sm md:text-base">
+                $250 Prize
+              </p>
+            </div>
+            <span
+              class="text-9xl font-black text-brandGold/10 absolute -bottom-6 right-2 z-0"
+              >1</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="order-3 flex flex-col items-center w-full md:w-1/3 mt-4 md:mt-0"
+        >
+          <div
+            class="w-16 h-16 mb-[-32px] mx-auto bg-[#CD7F32] rounded-full border-4 border-orange-400 flex items-center justify-center font-black text-white text-2xl shadow-[0_0_15px_rgba(205,127,50,0.5)] z-20 relative"
+          >
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div
+            class="w-full h-52 md:h-56 podium-3 rounded-t-xl flex flex-col items-center pt-12 relative overflow-hidden"
+          >
+            <span
+              class="text-[10px] md:text-xs font-black text-[#CD7F32]/70 uppercase tracking-widest mb-1 z-10"
+              >Player</span
+            >
+            <h3
+              class="font-bold text-xl md:text-2xl text-white tracking-wide z-10 leading-none"
+              id="user2_name"
+            >
+              ----
+            </h3>
+            <span
+              class="text-[10px] md:text-xs font-black text-[#CD7F32]/70 uppercase tracking-widest mt-4 mb-1 z-10"
+              >Wagered</span
+            >
+            <p
+              class="text-[#CD7F32] font-bold text-sm md:text-base z-10 leading-none"
+              id="user2_wager"
+            >
+              $----
+            </p>
+            <div
+              class="mt-4 bg-[#CD7F32]/20 px-4 py-1.5 rounded-full border border-[#CD7F32]/50 z-10"
+            >
+              <p class="text-white font-black text-xs md:text-sm">$100 Prize</p>
+            </div>
+            <span
+              class="text-8xl font-black text-white/5 absolute -bottom-4 right-2 z-0"
+              >3</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="glass-card px-4 py-6 md:px-8 rounded-2xl text-center mb-16 shadow-2xl border border-brandBlue/30 w-full max-w-3xl"
+      >
+        <h3
+          class="text-gray-400 uppercase tracking-widest font-bold text-xs md:text-sm mb-4"
+        >
+          Race Ends In
+        </h3>
+        <div
+          class="flex justify-center gap-2 sm:gap-4 md:gap-8 text-2xl sm:text-3xl md:text-5xl font-black font-mono text-white"
+        >
+          <div class="flex flex-col items-center">
+            <span
+              id="days"
+              class="text-brandBlue drop-shadow-[0_0_10px_rgba(30,161,242,0.8)]"
+              >05</span
+            ><span
+              class="text-[10px] md:text-xs text-gray-500 mt-1 uppercase font-sans"
+              >Days</span
+            >
+          </div>
+          <span class="text-brandBlue/50">:</span>
+          <div class="flex flex-col items-center">
+            <span id="hours">14</span
+            ><span
+              class="text-[10px] md:text-xs text-gray-500 mt-1 uppercase font-sans"
+              >Hours</span
+            >
+          </div>
+          <span class="text-brandBlue/50">:</span>
+          <div class="flex flex-col items-center">
+            <span id="minutes">32</span
+            ><span
+              class="text-[10px] md:text-xs text-gray-500 mt-1 uppercase font-sans"
+              >Mins</span
+            >
+          </div>
+          <span class="text-brandBlue/50">:</span>
+          <div class="flex flex-col items-center">
+            <span id="seconds" class="text-brandGold">09</span
+            ><span
+              class="text-[10px] md:text-xs text-gray-500 mt-1 uppercase font-sans"
+              >Secs</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full max-w-4xl glass-card rounded-2xl overflow-hidden mb-16 relative"
+      >
+        <div
+          class="h-1 w-full bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700"
+        ></div>
+        <div class="p-4 md:p-8 overflow-x-auto w-full">
+          <div class="min-w-[500px] md:min-w-full">
+            <div
+              class="grid grid-cols-12 gap-4 text-xs md:text-sm font-black text-gray-500 uppercase tracking-wider mb-4 px-4"
+            >
+              <div class="col-span-2 text-center">Rank</div>
+              <div class="col-span-4 text-left">Name</div>
+              <div class="col-span-3 text-right">Wagered</div>
+              <div class="col-span-3 text-right">Prize</div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #4
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user3_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user3_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #5
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user4_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user4_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #6
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user5_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user5_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #7
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user6_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user6_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #8
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user7_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user7_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #9
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user8_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user8_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-12 gap-4 items-center px-4 py-3 bg-[#0A0F1E]/50 hover:bg-[#131A2A] rounded-lg border-l-4 border-transparent hover:border-brandBlue transition-all duration-200 cursor-pointer"
+              >
+                <div class="col-span-2 text-center font-bold text-gray-500">
+                  #10
+                </div>
+                <div class="col-span-4 flex items-center gap-3">
+                  <div
+                    class="hidden sm:flex w-8 h-8 rounded-full bg-gray-800 items-center justify-center text-sm text-gray-400 border border-gray-700 shrink-0"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="font-bold text-gray-200 truncate" id="user9_name"
+                    >----</span
+                  >
+                </div>
+                <div
+                  class="col-span-3 text-right text-sm md:text-base text-gray-300 font-medium truncate"
+                  id="user9_wager"
+                >
+                  $----
+                </div>
+                <div
+                  class="col-span-3 text-right font-black text-brandGold drop-shadow-md"
+                >
+                  $0
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-5xl text-center px-2">
+        <h3
+          class="text-xl md:text-2xl font-black italic uppercase text-white mb-6 md:mb-8"
+        >
+          Follow Our Community
+        </h3>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4"
+        >
+          <a
+            href="http://www.kick.com/gpep133"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card p-4 md:p-6 rounded-xl flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-[#53FC18] transition duration-300 group"
+          >
+            <div
+              class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-black font-black text-2xl group-hover:shadow-[0_0_15px_rgba(83,252,24,0.6)]"
+            >
+              <img
+                src="./assets/img/kick.png"
+                alt="Kick"
+                class="w-6 h-6 md:w-8 md:h-8 object-contain"
+              />
+            </div>
+            <span
+              class="font-bold text-sm md:text-base text-gray-300 group-hover:text-white"
+              >Kick</span
+            >
+          </a>
+
+          <a
+            href="https://www.facebook.com/share/1CbbF5YGes/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card p-4 md:p-6 rounded-xl flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-[#1877F2] transition duration-300 group"
+          >
+            <i
+              class="fa-brands fa-facebook text-4xl md:text-5xl text-[#1877F2] group-hover:drop-shadow-[0_0_15px_rgba(24,119,242,0.6)]"
+            ></i>
+            <span
+              class="font-bold text-sm md:text-base text-gray-300 group-hover:text-white"
+              >Facebook</span
+            >
+          </a>
+
+          <a
+            href="https://x.com/gpep133?s=21"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card p-4 md:p-6 rounded-xl flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-white transition duration-300 group"
+          >
+            <svg
+              class="w-10 h-10 md:w-12 md:h-12 fill-white group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] transition-all"
+              viewBox="0 0 1200 1227"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+              />
+            </svg>
+            <span
+              class="font-bold text-sm md:text-base text-gray-300 group-hover:text-white"
+              >X</span
+            >
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@gpep133?_r=1&_t=ZP-955yyDnKkIw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card p-4 md:p-6 rounded-xl flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-[#ff0050] transition duration-300 group"
+          >
+            <i
+              class="fa-brands fa-tiktok text-4xl md:text-5xl text-white group-hover:drop-shadow-[0_0_15px_rgba(255,0,80,0.6)]"
+            ></i>
+            <span
+              class="font-bold text-sm md:text-base text-gray-300 group-hover:text-white"
+              >TikTok</span
+            >
+          </a>
+
+          <a
+            href="https://youtube.com/@gpep133?si=-qqxhIK-GVeJeNQx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card p-4 md:p-6 rounded-xl flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-[#FF0000] transition duration-300 group sm:col-span-3 md:col-span-1"
+          >
+            <i
+              class="fa-brands fa-youtube text-4xl md:text-5xl text-[#FF0000] group-hover:drop-shadow-[0_0_15px_rgba(255,0,0,0.6)]"
+            ></i>
+            <span
+              class="font-bold text-sm md:text-base text-gray-300 group-hover:text-white"
+              >YouTube</span
+            >
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="w-full mt-10 md:mt-20 border-t border-brandBlue/20 bg-[#0A0F1E]/90 backdrop-blur-md relative z-10"
+    >
+      <div class="max-w-6xl mx-auto px-4 py-10 md:py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <img
+              src="./assets/img/logo.png"
+              alt="GPEP133 Logo"
+              class="h-10 md:h-12 mb-4 drop-shadow-lg object-contain"
+            />
+            <p
+              class="text-gray-400 text-xs md:text-sm font-medium leading-relaxed max-w-xs"
+            >
+              The ultimate wager race and gaming community. Spin your favorite
+              slots, climb the ranks, and secure massive prizes on the
+              leaderboard.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <h4
+              class="text-white font-black italic tracking-widest uppercase mb-4 text-xs md:text-sm drop-shadow-md"
+            >
+              Quick Links
+            </h4>
+            <div
+              class="flex flex-col space-y-3 text-xs md:text-sm font-bold text-gray-400"
+            >
+              <a
+                href="./index.html"
+                class="hover:text-brandBlue hover:translate-x-1 transition-all duration-300"
+                >Leaderboard</a
+              >
+              <a
+                href="./stream.html"
+                class="hover:text-brandBlue hover:translate-x-1 transition-all duration-300"
+                >Stream</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <h4
+              class="text-white font-black italic tracking-widest uppercase mb-4 text-xs md:text-sm drop-shadow-md"
+            >
+              Legal & Support
+            </h4>
+            <div
+              class="flex flex-col space-y-3 text-xs md:text-sm font-bold text-gray-400 mb-6"
+            >
+              <a
+                href="#"
+                class="hover:text-brandGold hover:translate-x-1 transition-all duration-300"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="hover:text-brandGold hover:translate-x-1 transition-all duration-300"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="hover:text-brandGold hover:translate-x-1 transition-all duration-300"
+                >Contact Us</a
+              >
+            </div>
+
+            <div
+              class="flex items-center gap-2 text-gray-400 font-bold text-[10px] md:text-xs bg-[#131A2A] px-3 py-2 rounded-lg border border-gray-700/50 shadow-inner"
+            >
+              <span
+                class="w-6 h-6 rounded-full border border-gray-500 flex items-center justify-center text-xs font-black"
+                >18+</span
+              >
+              <span class="uppercase tracking-wider">Play Responsibly</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 pt-6 border-t border-gray-800/50 text-center flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p
+            class="text-gray-500 text-[10px] md:text-xs font-bold uppercase tracking-wider"
+          >
+            &copy; 2026 GPEP133. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const icon = mobileMenuBtn.querySelector("i");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        } else {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+        }
+      });
+
+      function updateCountdown() {
+        const now = new Date();
+        let seconds = 60 - now.getSeconds();
+        let minutes = 60 - now.getMinutes();
+        document.getElementById("minutes").innerText = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds
+          .toString()
+          .padStart(2, "0");
+      }
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
